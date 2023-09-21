@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bookstore</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h3>
+                Bookstore
+            </h3>
+            <div class="avatar">
+                <img src="./assets/anh.jpg" />
+                <span>John Doe</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="search">
+                <input id="search-book" type="text" placeholder="Search Book" class="input-search"
+                    oninput="searchBook()" />
+                <button type="button" class="btn-add" id="create-book">Add book</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="info-book">
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Topic</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-container hide">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <h3>Add book</h3>
+                    <b>X</b>
+                </div>
+                <div class="modal-body">
+                    <div class="add-book">
+                        <div class="form-group">
+                            <div class="name">
+                                <label for="name">Name</label>
+                            </div>
+                            <div>
+                                <input id="name" type="text" class="form-input" />
+                                <div class="message-error"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="name">
+                                <label for="author">Author</label>
+                            </div>
+                            <div>
+                                <input id="author" type="text" class="form-input" />
+                                <div class="message-error"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="name">
+                                <label for="topic">Topic</label>
+                            </div>
+                            <div>
+                                <select id="topic" class="form-select"></select>
+                                <div class="message-error"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <button onclick="addNew()" class="btn-create">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-delete hide">
+            <div class="modal-delete-container">
+                <div class="modal-delete-header">
+                    <h3 class="title">Delete book</h3>
+                    <b class="btn-exit">X</b>
+                </div>
+                <div class="modal-delete-body">
+                    <p> Do you want to delete <b class="name-book"></b> book? </p>
+                </div>
+                <div class="modal-delete-footer">
+                    <button class="btn-delete">Delete</button>
+                    <button class="btn-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
